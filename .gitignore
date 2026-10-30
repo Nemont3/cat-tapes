@@ -1,0 +1,11 @@
+out/
+__pycache__/
+*.pyc
+*.mp4
+*.webm
+*.gif
+*.png
+*.jpg
+*.flac
+*.wav
+.venv/

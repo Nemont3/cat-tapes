@@ -1,0 +1,64 @@
+{
+ "sunbeam-nap": {
+  "label": "SUNBEAM NAP",
+  "seed": 42,
+  "prompt": "A fluffy orange tabby cat sleeps curled on warm wooden floorboards inside a bright square of afternoon sunlight from a window. Handheld camcorder footage, the operator following the cat at a slow walk, slight natural shake, imperfect framing, slightly late reframes. Dust motes drift slowly through the sunbeam. Initially the cat's belly rises and falls with slow breathing, then one ear twitches and its paw stretches out and curls back in. Simultaneously, soft purring and the slow tick of a wall clock fill the quiet room. Warm, soft, nostalgic colour with gentle detail in the fur.",
+  "music": {
+   "bpm": 60,
+   "key": "D minor",
+   "seed": 777
+  }
+ },
+ "rain-window": {
+  "label": "RAIN ON THE WINDOW",
+  "seed": 7,
+  "prompt": "A small black cat with round yellow eyes sits on a windowsill watching raindrops run down the glass of a rainy grey afternoon. Handheld camcorder footage, the operator following the cat at a slow walk, slight natural shake, imperfect framing, slightly late reframes. The cat's head follows a single drop sliding down the pane, then it lifts one paw and taps the glass softly. Simultaneously, steady rain patters on the window and a far-off thunder roll rumbles. Cozy, muted, cool-blue light with a warm lamp glow in the room.",
+  "music": {
+   "bpm": 58,
+   "key": "D minor",
+   "seed": 4242,
+   "flavour": "solo soft felt piano and one soft rain-like synth pad only, "
+  }
+ },
+ "blanket-loaf": {
+  "label": "BLANKET LOAF",
+  "seed": 7,
+  "prompt": "A grey-and-white cat sits tucked into a perfect loaf on a chunky cream knit blanket on a sofa, paws hidden underneath. Handheld camcorder footage, the operator following the cat at a slow walk, slight natural shake, imperfect framing, slightly late reframes. The cat looks straight into the lens and gives a slow, sleepy blink, then settles its chin a little lower. Simultaneously, deep contented purring and a fireplace crackling softly off screen. Warm evening lamplight, soft cozy colour, fine detail in the knit and the fur.",
+  "music": {
+   "bpm": 62,
+   "key": "D minor",
+   "seed": 101,
+   "flavour": "one warm analog synth pad and soft felt piano only, "
+  }
+ },
+ "3am-zoomies": {
+  "label": "3AM ZOOMIES",
+  "seed": 1234,
+  "prompt": "A tiny tabby kitten skids across a wooden hallway at night, the floor lit warmly by a glowing nightlight and silver moonlight from a window, then pounces onto a rolled-up white sock and tumbles over with it. Handheld camcorder footage, the operator following the kitten at a slow walk, slight natural shake, imperfect framing, slightly late reframes. Initially the kitten crouches with its tail wiggling, a moment later it dashes forward. Simultaneously, tiny paws thump on the floorboards and the kitten lets out a small chirp. Cozy night-time colour, the kitten clearly visible in the warm light, soft amber glow.",
+  "music": {
+   "bpm": 70,
+   "key": "D minor",
+   "seed": 777
+  }
+ },
+ "cardboard-castle": {
+  "label": "CARDBOARD CASTLE",
+  "seed": 42,
+  "prompt": "A small white kitten with grey ears discovers an open cardboard box on a living-room rug, climbs over the edge and drops inside, then slowly peeks back out over the rim with wide curious eyes. Handheld camcorder footage, the operator following the kitten at a slow walk, slight natural shake, imperfect framing, slightly late reframes. Simultaneously, cardboard rustles and the kitten gives one soft mew. Bright, warm daylight, cozy family-room colour.",
+  "music": {
+   "bpm": 66,
+   "key": "D minor",
+   "seed": 4242
+  }
+ },
+ "first-snow": {
+  "label": "FIRST SNOW",
+  "seed": 7,
+  "prompt": "A fluffy tabby kitten sits in an open back doorway looking out at the first snowfall, then reaches out a paw and bats at the big slow snowflakes drifting past, and gives a tiny sneeze. Handheld camcorder footage, the operator following the kitten at a slow walk, slight natural shake, imperfect framing, slightly late reframes. Simultaneously, the soft hush of falling snow and the faint creak of the door. Cold white daylight outside, warm light inside, gentle nostalgic colour.",
+  "music": {
+   "bpm": 60,
+   "key": "D minor",
+   "seed": 101
+  }
+ }
+}
