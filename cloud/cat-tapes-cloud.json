@@ -906,11 +906,11 @@
     "h7",
     0
    ],
-   "blur_radius": 2,
-   "sigma": 1.2
+   "blur_radius": 1,
+   "sigma": 0.6
   },
   "_meta": {
-   "title": "tape softness"
+   "title": "tape softness (light: v1's radius 2 read as out of focus)"
   }
  },
  "h9": {
@@ -921,7 +921,7 @@
     0
    ],
    "seed": 7,
-   "strength": 0.04
+   "strength": 0.025
   },
   "_meta": {
    "title": "tape grain"
@@ -984,12 +984,12 @@
     0
    ],
    "upscale_method": "nearest-exact",
-   "width": 1440,
-   "height": 1080,
+   "width": 1280,
+   "height": 960,
    "crop": "disabled"
   },
   "_meta": {
-   "title": "up to 1440×1080, hard pixels"
+   "title": "up exactly 2× to 1280×960, hard even pixels"
   }
  },
  "t1": {
@@ -1021,7 +1021,9 @@
    ],
    "filename_prefix": "cat-tape/tape",
    "format": "mp4",
-   "format.codec": "h264"
+   "format.codec": "h264",
+   "format.codec.encoding": "re-encode",
+   "format.codec.encoding.crf": 16
   },
   "_meta": {
    "title": "save the tape"

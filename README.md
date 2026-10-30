@@ -1,4 +1,4 @@
-# cat-tape 📼🐈
+# CAT TAPES 📼🐈
 
 **Press a tape, get a cozy lofi cat video that looks like it was filmed on a camcorder in 1996.**
 

@@ -6,7 +6,7 @@ nodes and none of our ffmpeg). Output: cat-tapes-cloud.json (API format; ComfyUI
   ACE-Step 1.5 XL turbo lofi (our tested graph)
   audio: LTX's own sound −12 dB, music added on top, trimmed to the clip (AudioMerge)
   VHS look from core image nodes: 640×480 4:3, red/green/blue channels offset (multiply by pure-colour images, screen
-  back together), blur, grain, contrast, PLAY > (the default font has no ▶) and a date stamp (TextOverlay), nearest-neighbour up to 1440×1080.
+  back together), blur, grain, contrast, PLAY > (the default font has no ▶) and a date stamp (TextOverlay), nearest-neighbour up exactly 2× to 1280×960.
   Not reproduced from the ffmpeg grade: vignette, scanline grid, saturation lift, the music's fades and loudness finish.
 """
 import json, pathlib, sys
@@ -59,17 +59,18 @@ def build():
     rg = node("h5", "ImageBlend", "red + green (colour bleed)", image1=chans[0], image2=chans[1], blend_factor=1.0, blend_mode="screen")
     rgb = node("h6", "ImageBlend", "+ blue (colour bleed)", image1=rg, image2=chans[2], blend_factor=1.0, blend_mode="screen")
     back = node("h7", "ImageScale", "back to 640×480", image=rgb, upscale_method="bicubic", width=640, height=480, crop="disabled")
-    soft = node("h8", "ImageBlur", "tape softness", image=back, blur_radius=2, sigma=1.2)
-    grain = node("h9", "ImageAddNoise", "tape grain", image=soft, seed=7, strength=0.04)
+    soft = node("h8", "ImageBlur", "tape softness (light: v1's radius 2 read as out of focus)", image=back, blur_radius=1, sigma=0.6)
+    grain = node("h9", "ImageAddNoise", "tape grain", image=soft, seed=7, strength=0.025)
     con = node("h10", "AdjustContrast", "a little contrast", images=grain, factor=1.05)
     play = node("h11", "TextOverlay", "PLAY >", images=con, text="PLAY  >", font_size=4.5, color="#ffffff",
                 position="top", align="left", outline=True)
     stamp = node("h12", "TextOverlay", "date stamp", images=play, text=DATE_STAMP, font_size=4.5, color="#ffffff",
                  position="bottom", align="right", outline=True)
-    big = node("h13", "ImageScale", "up to 1440×1080, hard pixels", image=stamp, upscale_method="nearest-exact", width=1440, height=1080, crop="disabled")
+    big = node("h13", "ImageScale", "up exactly 2× to 1280×960, hard even pixels", image=stamp, upscale_method="nearest-exact", width=1280, height=960, crop="disabled")
     # 5 · the tape
     vid = node("t1", "CreateVideo", "the tape", images=big, fps=fps, audio=mix)
-    node("t2", "SaveVideo", "save the tape", video=vid, filename_prefix="cat-tape/tape", format="mp4", **{"format.codec": "h264"})
+    node("t2", "SaveVideo", "save the tape", video=vid, filename_prefix="cat-tape/tape", format="mp4",
+         **{"format.codec": "h264", "format.codec.encoding": "re-encode", "format.codec.encoding.crf": 16})   # default crf 23 smeared the grain
     return g
 
 
