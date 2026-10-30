@@ -20,10 +20,13 @@ PRESET = "sunbeam-nap"
 DATE_STAMP = "OCT 29 1996  4:12 PM"   # a fixed camcorder date: the cloud has no clock node
 
 
-def build():
-    p = tape.load_presets()[PRESET]
-    recipe = tape.plan_tape(None, PRESET)
-    subs = {"NAME": "cat-tape", "PROMPT": recipe["video"]["prompt"], "NEGATIVE": tape.NEGATIVE, "SEED": p["seed"],
+def build(preset=None, prompt=None, seed=None, negative_extra=None):
+    preset = preset or PRESET
+    p = tape.load_presets()[preset]
+    recipe = tape.plan_tape(None, preset)
+    subs = {"NAME": "cat-tape", "PROMPT": prompt or recipe["video"]["prompt"],
+            "NEGATIVE": tape.NEGATIVE + (", " + negative_extra if negative_extra else ""),
+            "SEED": seed if seed is not None else p["seed"],
             "ASPECT": "4:3 (Standard)", "SECONDS": tape.TAPE_SECONDS}
     video = tape.load_graph(tape.WF_VIDEO, subs)
     m = recipe["music"]
@@ -85,6 +88,9 @@ def relink(g, prefix, old, only=None):
 
 
 if __name__ == "__main__":
-    out = HERE / "cat-tapes-cloud.json"
-    out.write_text(json.dumps(build(), indent=1, ensure_ascii=False))
+    import argparse
+    ap = argparse.ArgumentParser(); ap.add_argument("--preset", default=PRESET); ap.add_argument("--prompt-file")
+    ap.add_argument("--seed", type=int); ap.add_argument("--negative-extra"); ap.add_argument("--out", default=str(HERE / "cat-tapes-cloud.json")); a = ap.parse_args()
+    prompt = pathlib.Path(a.prompt_file).read_text().strip() if a.prompt_file else None
+    out = pathlib.Path(a.out); out.write_text(json.dumps(build(a.preset, prompt, a.seed, a.negative_extra), indent=1, ensure_ascii=False))
     print(out)

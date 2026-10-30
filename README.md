@@ -2,13 +2,14 @@
 
 **Press a tape, get a cozy lofi cat video that looks like it was filmed on a camcorder in 1996.**
 
-▶ **Watch:** [the demo](DEMO-LINK) · [an Evening Tape](EVENING-LINK) · more in [samples/](samples/README.md)
+▶ **Watch:** [the demo (1:32)](https://youtu.be/-0cfz9QJGxU) · more in [samples/](samples/README.md)
 
 cat-tape is a small local web app built on ComfyUI. Pick a cassette from the shelf or describe a cat moment in your own
 words. A few minutes later a 10-second tape comes out: an LTX-2.5 clip with
 its own sound, a soft generated lofi track on top, and a home-video VHS look with a blinking `PLAY ▶` and a date stamp.
 
-Everything runs on your own GPU with open weights. No cloud, no API keys, no partner nodes.
+Everything runs on your own GPU with open weights: no cloud needed, no API keys, no partner nodes.
+Or try it in your browser: [Comfy Cloud](https://cloud.comfy.org/?share=df687c5f4ce0) (a simplified edition; it runs on your Comfy account).
 
 ## An evening tape (40 seconds)
 
@@ -139,6 +140,8 @@ model missing, a timeout, a missing output, a silent track. `tests/test_fail_lou
   there. Its use restrictions (Attachment A and the Acceptable Use Policy) apply to what you make with it.
 - **ACE-Step 1.5 XL turbo** (the ACE-Step team): MIT on its [model card](https://huggingface.co/ACE-Step/acestep-v15-xl-turbo).
 - Notes and the exact clauses that matter for this app: `LICENSES-MODELS.md`.
+- **The model weights this software drives are NOT covered by the MIT licence:** LTX-2.5 is under the LTX-2.x
+  Community License Agreement, ACE-Step 1.5 under MIT, Z-Image Turbo (the page backdrop) under Apache-2.0.
 
 **Everything cat-tape makes is AI-generated.** Every tape carries that in its metadata, and anything you post
 should say so (the LTX-2.x licence asks for it).

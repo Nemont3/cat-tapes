@@ -288,7 +288,7 @@
  "v364": {
   "class_type": "CLIPTextEncode",
   "inputs": {
-   "text": "A fluffy orange tabby cat sleeps curled on warm wooden floorboards inside a bright square of afternoon sunlight from a window. Handheld camcorder footage, the operator following the cat at a slow walk, slight natural shake, imperfect framing, slightly late reframes. Dust motes drift slowly through the sunbeam. Initially the cat's belly rises and falls with slow breathing, then one ear twitches and its paw stretches out and curls back in. Simultaneously, soft purring and the slow tick of a wall clock fill the quiet room. Warm, soft, nostalgic colour with gentle detail in the fur.",
+   "text": "A fluffy orange tabby cat sits on a sunlit wooden porch step in a backyard at golden hour. A medium shot filmed from a few steps away, the whole cat in frame from its ears to the tip of its tail at all times. Handheld camcorder footage, the operator standing a few steps back, slight natural shake, imperfect framing, slightly late reframes. The cat looks around the yard, its ears turning toward a sound, its tail swishing slowly across the step; then it stands, stretches its front legs, takes a few unhurried steps toward the camera and sits down again a few feet away, facing the camera, and gives a slow blink. Simultaneously, birdsong, a soft breeze and the creak of the wooden step. Warm golden late-afternoon light, soft contrast, gentle faded home-video colour.",
    "clip": [
     "v387",
     0
@@ -301,7 +301,7 @@
  "v373": {
   "class_type": "CLIPTextEncode",
   "inputs": {
-   "text": "pc game, console game, video game, cartoon, childish, ugly, text, watermark, people, extra legs, extra limbs, extra paws, deformed, twisted body, merged animals, gimbal, steadicam, dolly shot, smooth camera glide",
+   "text": "pc game, console game, video game, cartoon, childish, ugly, text, watermark, people, extra legs, extra limbs, extra paws, deformed, twisted body, merged animals, gimbal, steadicam, dolly shot, smooth camera glide, rear view, cat facing away, back of the cat, cropped body, lethargic, motionless, close-up, extreme close-up, face filling the frame, macro, touching the lens, paw on the lens, oversaturated, harsh contrast, smartphone portrait mode",
    "clip": [
     "v387",
     0

@@ -4,7 +4,8 @@ Run the effect in your browser on your own Comfy Cloud account: no install, no G
 
 1. Sign in at **cloud.comfy.org**. Drag **`cat-tapes-cloud.json`** onto the canvas (or **Workflow → Open…**).
 2. Click **Run** once. Each run takes **several minutes** and uses your own Comfy Cloud credits or free runs. Then the
-   tape appears in the **save the tape** box: 10 seconds of a fluffy orange cat napping in the sun, with the VHS
+   tape appears in the **save the tape** box: 10 seconds of a fluffy orange cat on a sunlit porch step at golden hour,
+   looking around and stepping toward the camera, with the VHS
    look, `PLAY >`, a date stamp and soft lofi music.
 3. Want a different cat moment? Edit the long prompt text (the **CLIPTextEncode** box near the left) and Run again.
 
